@@ -8,75 +8,56 @@
         'xlarge-to-max': '(min-width: 1681px)',
         'small-to-xlarge': '(min-width: 481px) and (max-width: 1680px)'
     });
-
-	$(function() {
-
-		var	$window = $(window),
-			$head = $('head'),
-			$body = $('body');
-
-		// Disable animations/transitions ...
-
-			// ... until the page has loaded.
-				$body.addClass('is-loading');
-
-				$window.on('load', function() {
-					setTimeout(function() {
-						$body.removeClass('is-loading');
-					}, 100);
-				});
-
-			// ... when resizing.
-				var resizeTimeout;
-
-				$window.on('resize', function() {
-
-					// Mark as resizing.
-						$body.addClass('is-resizing');
-
-					// Unmark after delay.
-						clearTimeout(resizeTimeout);
-
-						resizeTimeout = setTimeout(function() {
-							$body.removeClass('is-resizing');
-						}, 100);
-
-				});
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
-
-		// Fixes.
-
-			// Object fit images.
-				if (!skel.canUse('object-fit')
-				||	skel.vars.browser == 'safari')
-					$('.image.object').each(function() {
-
-						var $this = $(this),
-							$img = $this.children('img');
-
-						// Hide original image.
-							$img.css('opacity', '0');
-
-						// Set background.
-							$this
-								.css('background-image', 'url("' + $img.attr('src') + '")')
-								.css('background-size', $img.css('object-fit') ? $img.css('object-fit') : 'cover')
-								.css('background-position', $img.css('object-position') ? $img.css('object-position') : 'center');
-
-					});
-
-		// Sidebar.
-			var $sidebar = $('#sidebar'),
+    $(function() {
+        var $window = $(window),
+            $head = $('head'),
+            $body = $('body');            
+            // Disable animations/transitions ...
+            // ... until the page has loaded.
+            $body.addClass('is-loading');
+            $window.on('load', function() {
+                setTimeout(function() {
+                    $body.removeClass('is-loading');
+                }, 100);
+            });            
+            // ... when resizing.
+            var resizeTimeout;
+            $window.on('resize', function() {
+                // Mark as resizing.
+                $body.addClass('is-resizing');
+                // Unmark after delay.
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    $body.removeClass('is-resizing');
+                }, 100);
+            });
+            // Fix: Placeholder polyfill.
+            $('form').placeholder();
+            // Prioritize "important" elements on medium.
+            skel.on('+medium -medium', function() {
+                $.prioritize(
+                    '.important\\28 medium\\29',
+                    skel.breakpoint('medium').active
+                );
+            });
+            
+            // Fixes.
+            // Object fit images.
+            if (!skel.canUse('object-fit') ||	skel.vars.browser === 'safari') {
+                $('.image.object').each(function() {
+                    var $this = $(this),
+                        $img = $this.children('img');
+                        // Hide original image.
+                        $img.css('opacity', '0');
+                        // Set background.
+                        $this
+                            .css('background-image', 'url("' + $img.attr('src') + '")')
+                            .css('background-size', $img.css('object-fit') ? $img.css('object-fit') : 'cover')
+                            .css('background-position', $img.css('object-position') ? $img.css('object-position') : 'center');
+                });
+            }            
+            // Sidebar.
+            var $sidebar = $('#sidebar'),
 				$sidebar_inner = $sidebar.children('.inner');
 
 			// Inactive by default on <= large.
@@ -131,7 +112,7 @@
 							event.stopPropagation();
 
 						// Check URL.
-							if (!href || href == '#' || href == '')
+							if (!href || href === '#' || href === '')
 								return;
 
 						// Hide sidebar.
@@ -140,7 +121,7 @@
 						// Redirect to href.
 							setTimeout(function() {
 
-								if (target == '_blank')
+								if (target === '_blank')
 									window.open(href);
 								else
 									window.location.href = href;
@@ -247,32 +228,24 @@
 						.trigger('resize.sidebar-lock');
 
 					});
+    
+    // Menu.
+    var $menu = $('#menu'),
+        $menu_openers = $menu.children('ul').find('.opener');
 
-		// Menu.
-			var $menu = $('#menu'),
-				$menu_openers = $menu.children('ul').find('.opener');
-
-			// Openers.
-				$menu_openers.each(function() {
-
-					var $this = $(this);
-
-					$this.on('click', function(event) {
-
-						// Prevent default.
-							event.preventDefault();
-
-						// Toggle.
-							$menu_openers.not($this).removeClass('active');
-							$this.toggleClass('active');
-
-						// Trigger resize (sidebar lock).
-							$window.triggerHandler('resize.sidebar-lock');
-
-					});
-
-				});
-
-	});
+        // Openers.
+        $menu_openers.each(function() {
+            var $this = $(this);
+            $this.on('click', function(event) {
+                // Prevent default.
+                event.preventDefault();
+                // Toggle.
+                $menu_openers.not($this).removeClass('active');
+                $this.toggleClass('active');
+                // Trigger resize (sidebar lock).
+                $window.triggerHandler('resize.sidebar-lock');
+            });
+        });
+    });
 
 })(jQuery);
