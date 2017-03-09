@@ -3464,8 +3464,7 @@ button:disabled,
     padding: 0;
     text-transform: uppercase;
 }
-#menu ul a, 
-#menu ul span {
+#menu ul a, #menu ul span {
     border-bottom: 0;
     color: inherit;
     cursor: pointer;
