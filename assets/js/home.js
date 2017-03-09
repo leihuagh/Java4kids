@@ -1,5 +1,5 @@
 $(function() {
-    $("#menu_1_0").click(onMenuClick);
+    $("#menu_1_1").click(onMenuClick);
 });
 
 function onMenuClick() {

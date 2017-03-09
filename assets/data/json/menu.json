@@ -1,3 +1,12 @@
 {
-    "name": "lhua"
+    "menu":[
+        {"menu_id":"0_0","title":"Overview","datapath":"","url":"index.html"},
+        {"menu_id":"1_0","title":"Build Development Environment","datapath":"views/ch01/","url":"index.html"},
+        {"menu_id":"1_1","title":"Java Installation","datapath":"views/ch01/","url":"install.html"},
+        {"menu_id":"1_2","title":"Windows Environment Settings","datapath":"views/ch01/","url":"settings.html"},
+        {"menu_id":"1_3","title":"Hello World","datapath":"views/ch01/","url":"helloworld.html"},
+        {"menu_id":"2_0","title":"Using IDE","datapath":"views/ch02/","url":"index.html"},
+        {"menu_id":"2_1","title":"Install Eclipse","datapath":"views/ch02/","url":"install.html"},
+        {"menu_id":"2_2","title":"Hello World Using Eclipse","datapath":"views/ch02/","url":"helloworld.html"}
+    ]
 }
