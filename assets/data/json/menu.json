@@ -25,9 +25,9 @@
             "datapath":"views/ch02/",
             "submenu": [
                 {"submenu_id":"0","title":"Using IDE","file":""},
-                {"submenu_id":"1","title":"Install Eclipse","file":"install.html"},
+                {"submenu_id":"1","title":"Install Eclipse","file":"installation.html"},
                 {"submenu_id":"2","title":"Hello World Using Eclipse","file":"helloworld.html"}
             ]            
-        }    
+        }
     ]
 }
