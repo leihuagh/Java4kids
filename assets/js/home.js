@@ -10,7 +10,7 @@ $(function() {
 });
 
 function init_menu(json) {     
-    for (i in json.menu) {
+    for (i in json.menu) { 
         var menuitem = new Array();
         menuitem["menu_id"] = json.menu[i].menu_id; 
         menuitem["datapath"] = json.menu[i].datapath; 

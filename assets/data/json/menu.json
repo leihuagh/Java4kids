@@ -28,6 +28,15 @@
                 {"submenu_id":"1","title":"Install Eclipse","file":"installation.html"},
                 {"submenu_id":"2","title":"Hello World Using Eclipse","file":"helloworld.html"}
             ]            
+        },
+        {
+            "menu_id":"3",
+            "children":"1",
+            "datapath":"views/ch03/",
+            "submenu": [
+                {"submenu_id":"0","title":"Data Types","file":""},
+                {"submenu_id":"1","title":"Basic Data Types","file":"basicdatatypes.html"}
+            ]            
         }
     ]
 }
