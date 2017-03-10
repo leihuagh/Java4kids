@@ -14,7 +14,7 @@
             "datapath":"views/ch01/",
             "submenu": [
                 {"submenu_id":"0","title":"Build Development Environment","file":""},
-                {"submenu_id":"1","title":"Java Installation","file":"install.html"},
+                {"submenu_id":"1","title":"Java Installation","file":"installation.html"},
                 {"submenu_id":"2","title":"Windows Environment Settings","file":"settings.html"},
                 {"submenu_id":"3","title":"Hello World","file":"helloworld.html"}
             ]            

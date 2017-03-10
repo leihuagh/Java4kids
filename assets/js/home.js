@@ -32,7 +32,7 @@ function init_menu(json) {
 function onMenuClick(evt) {
     var menu_id = parseInt($(this).prop("id").split("_")[1]);
     var submenu_id = parseInt($(this).prop("id").split("_")[2]); 
-    if(menu[menu_id]["submenu"][submenu_id]["file"] !== "") {
+    if(menu[menu_id]["submenu"][submenu_id]["file"] !== "") { 
         $("#main_contents").load(dataPath+menu[menu_id]["datapath"]+menu[menu_id]["submenu"][submenu_id]["file"]);
     }
     
