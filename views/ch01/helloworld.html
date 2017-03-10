@@ -1,16 +1,100 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+<title>Command Line Hello World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../assets/css/home.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/css/views/ch01/hello-world.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<section>
+    <header class="main">
+        <h2>Command Line Hello World</h2>
+    </header>    
+    <h3>Your First Java Program</h3>
+    <div class="row">
+        <div class="12u">
+            <h4>Three Main Steps in Java Programming</h4>
+            <ol>
+                <li><em>Write</em> the program in Java and save it in a file.</li>
+                <li><em>Compile</em> the program to translate it from Java language into a special byte code that JVM understands</li>
+                <li><em>Run</em> the program.</li>                
+            </ol>
+            <h4>Write a Programm</h4>
+            <ul>
+                <li>
+                    <div>Open your notepad. Write a program follow the codes below:</div>   
+                    <div class="row">
+                        <div class="6u 12u(small)">
+<pre><code>
+public class HelloWorld {
+    public static void main(string[] args) {
+        System.out.println("Hello World, Command Line");
+    }
+}
+</code></pre>
+                        </div>   
+                        <div class="6u 12u(small)"> 
+                            <span class="image fit"><img src="assets/img/views/ch01/helloworld/01-commandline-helloworld.png" alt="" /></span>
+                        </div>
+                    </div>
+
+                </li>                
+                <li>
+                    <div>Save file name</div>
+                    <div class="row">
+                        <div  class="6u 12u(small)">Save file name as "helloworld.java" in to your working directory.  For our case: C:\projects\javaprogram\</div>
+                        <div  class="6u 12u(small)">
+                            <span class="image fit"><img src="assets/img/views/ch01/helloworld/02-saveas-file.png" alt="" /></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>List Java Source Codes</div>
+                    <div class="row">
+                        <div  class="6u 12u(small)">
+                            <ol>
+                                <li>Open Command Line</li>
+                                <li>Navigate the java file by locating to "C:\projects\javaprogram\"</li>
+                                <li>Type: dir</li>
+                                <li>helloworld.java will be shown on the list</li>
+                            </ol>
+                        </div>
+                        <div  class="6u 12u(small)">
+                            <span class="image fit"><img src="assets/img/views/ch01/helloworld/03-list-file.png" alt="" /></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>Compile Java Source Codes</div>
+                    <div class="row">
+                        <div  class="6u 12u(small)">
+                            <ol>
+                                <li>Type: javac helloworld.java</li>
+                                <li>Hit "Enter" kay</li>                                
+                            </ol>
+                        </div>
+                        <div  class="6u 12u(small)">
+                            <span class="image fit"><img src="assets/img/views/ch01/helloworld/04-compile-file.png" alt="" /></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="../../assets/vendors/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script src="../../assets/js/skel.min.js" type="text/javascript"></script>
+<script src="../../assets/js/util.js" type="text/javascript"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/views/ch01/command-line-helloworld.js" type="text/javascript"></script>
+<script type="text/javascript">
+    // <![CDATA[
+    var dataPath = '../../'; 
+    
+    // ]]>
+</script>
+</body>
 </html>
