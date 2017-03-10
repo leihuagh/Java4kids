@@ -5,29 +5,38 @@ $.ajaxSetup ({
 $(function() { 
     $.getJSON(dataPath + pathToData, function(json) { 
         init_menu(json);
-        //$("span[id^='menu_']").click(onMenuClick)
+        $("span[id^='menu_']").click(onMenuClick);
         //$("#menu_1_1").click(onMenuClick);
         
     });
 });
 
-function init_menu(json) { 
+function init_menu(json) {     
     for (i in json.menu) {
-        menu["menu_id"] = json.menu[i].menu_id; 
+        var menuitem = new Array();
+        menuitem["menu_id"] = json.menu[i].menu_id; 
+        menuitem["datapath"] = json.menu[i].datapath; 
+        menuitem["children"] = json.menu[i].children; 
+        menuitem["submenu"] = new Array();
         var max = parseInt(json.menu[i].children); 
-        for (var j=0; j<=max; j++) {
+        for (var j=0; j<=max; j++) {  
             var submenu = new Array();
             submenu["submenu_id"] = json.menu[i].submenu[j].submenu_id; 
             submenu["title"] = json.menu[i].submenu[j].title;
-            submenu["datapath"] = json.menu[i].submenu[j].datapath;
+            submenu["file"] = json.menu[i].submenu[j].file;
+            menuitem["submenu"][j] = submenu;
         }
+        
+        menu[i] = menuitem;
     }
 }
 
 function onMenuClick(evt) {
-    var menu_id = $(this).prop("id").split("_")[1];
-    var submenu_id = $(this).prop("id").split("_")[2];
-    
-    //$("#main_contents").load(dataPath+"views/ch01/install.html");
+    var menu_id = parseInt($(this).prop("id").split("_")[1]);
+    var submenu_id = parseInt($(this).prop("id").split("_")[2]); 
+    if(menu[menu_id]["submenu"][submenu_id]["file"] !== "") {
+        $("#main_contents").load(dataPath+menu[menu_id]["datapath"]+menu[menu_id]["submenu"][submenu_id]["file"]);
+    }
+    //
 }
 
