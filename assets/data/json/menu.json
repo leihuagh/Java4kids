@@ -1,36 +1,32 @@
 {
-    "menu":[
-        {"menu_id":"0","submenu_id":"0","title":"Overview","datapath":"","url":"index.html"},
-        {"menu_id":"1","submenu_id":"0","title":"Build Development Environment","datapath":"views/ch01/","url":""},
-        {"menu_id":"1","submenu_id":"1","title":"Java Installation","datapath":"views/ch01/","url":"install.html"},
-        {"menu_id":"1","submenu_id":"2","title":"Windows Environment Settings","datapath":"views/ch01/","url":"settings.html"},
-        {"menu_id":"1","submenu_id":"3","title":"Hello World","datapath":"views/ch01/","url":"helloworld.html"},
-        {"menu_id":"2","submenu_id":"0","title":"Using IDE","datapath":"views/ch02/","url":""},
-        {"menu_id":"2","submenu_id":"1","title":"Install Eclipse","datapath":"views/ch02/","url":"install.html"},
-        {"menu_id":"2","submenu_id":"2","title":"Hello World Using Eclipse","datapath":"views/ch02/","url":"helloworld.html"}
-    ],
-    "menu1": [
+    "menu": [
         {
             "menu_id":"0",
+            "children":"0",
+            "datapath":"",
             "submenu": [
-                {"submenu_id":"0","title":"Overview","datapath":"","url":"index.html"}
+                {"submenu_id":"0","title":"Overview","datapath":"","file":"index.html"}
             ]            
         },
         {
             "menu_id":"1",
+            "children":"3",
+            "datapath":"views/ch01/",
             "submenu": [
-                {"submenu_id":"0","title":"Build Development Environment","datapath":"views/ch01/","url":""},
-                {"submenu_id":"1","title":"Java Installation","datapath":"views/ch01/","url":"install.html"},
-                {"submenu_id":"2","title":"Windows Environment Settings","datapath":"views/ch01/","url":"settings.html"},
-                {"submenu_id":"3","title":"Hello World","datapath":"views/ch01/","url":"helloworld.html"}
+                {"submenu_id":"0","title":"Build Development Environment","file":""},
+                {"submenu_id":"1","title":"Java Installation","file":"install.html"},
+                {"submenu_id":"2","title":"Windows Environment Settings","file":"settings.html"},
+                {"submenu_id":"3","title":"Hello World","file":"helloworld.html"}
             ]            
         },
         {
             "menu_id":"2",
+            "children":"2",
+            "datapath":"views/ch02/",
             "submenu": [
-                {"submenu_id":"0","title":"Using IDE","datapath":"views/ch02/","url":""},
-                {"submenu_id":"1","title":"Install Eclipse","datapath":"views/ch02/","url":"install.html"},
-                {"submenu_id":"2","title":"Hello World Using Eclipse","datapath":"views/ch02/","url":"helloworld.html"}
+                {"submenu_id":"0","title":"Using IDE","file":""},
+                {"submenu_id":"1","title":"Install Eclipse","file":"install.html"},
+                {"submenu_id":"2","title":"Hello World Using Eclipse","file":"helloworld.html"}
             ]            
         }    
     ]
