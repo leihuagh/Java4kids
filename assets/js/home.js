@@ -5,9 +5,7 @@ $.ajaxSetup ({
 $(function() { 
     $.getJSON(dataPath + pathToData, function(json) { 
         init_menu(json);
-        $("span[id^='menu_']").click(onMenuClick);
-        //$("#menu_1_1").click(onMenuClick);
-        
+        $("span[id^='menu_']").click(onMenuClick);        
     });
 });
 
@@ -37,6 +35,6 @@ function onMenuClick(evt) {
     if(menu[menu_id]["submenu"][submenu_id]["file"] !== "") {
         $("#main_contents").load(dataPath+menu[menu_id]["datapath"]+menu[menu_id]["submenu"][submenu_id]["file"]);
     }
-    //
+    
 }
 
