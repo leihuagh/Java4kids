@@ -3,9 +3,9 @@
         {
             "menu_id":"0",
             "children":"0",
-            "datapath":"",
+            "datapath":"views/ch00/",
             "submenu": [
-                {"submenu_id":"0","title":"Overview","datapath":"","file":"index.html"}
+                {"submenu_id":"0","title":"Overview","file":"index.html"}
             ]            
         },
         {

@@ -26,7 +26,8 @@ function init_menu(json) {
         }
         
         menu[i] = menuitem;
-    }
+    }    
+    $("#main_contents").load(dataPath+menu[0]["datapath"]+menu[0]["submenu"][0]["file"]);
 }
 
 function onMenuClick(evt) {
